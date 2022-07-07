@@ -2,9 +2,9 @@
 
 <div id="app">
     <h1>Primeiro App</h1>
-    <p>Bem vindo {{nome}}</p>
+    <p>Usuário: {{nome}}</p>
     
-    <a v-bind:href="canal">Canal Youtube</a>
+    <button v-on:click="entrar()">Entrar</button>
 
 </div>
 
@@ -14,9 +14,12 @@
         data() {
             return {
                 nome: 'Maycon Santana',
-                canal: 'https://youtube.com'
             }
         },
-       
+        methods: {
+            entrar() {
+                this.nome = 'Maycon Inforgames';
+            }
+        }
     })
 </script>
