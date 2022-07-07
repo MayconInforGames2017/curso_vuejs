@@ -3,10 +3,9 @@
 <div id="app">
     <h1>Primeiro App</h1>
     <p>Bem vindo {{nome}}</p>
-    <p>Valor do console {{valor}}</p>
-    <p>{{ bemVindo() }}</p>
-    <p>{{ idadePessoa() }}</p>
-    <h2>Testes</h2>
+    
+    <a v-bind:href="canal">Canal Youtube</a>
+
 </div>
 
 <script>
@@ -15,17 +14,9 @@
         data() {
             return {
                 nome: 'Maycon Santana',
-                idade: '36'
+                canal: 'https://youtube.com'
             }
         },
-        methods: {
-            bemVindo() {
-                return 'Bem vindo ' + this.nome;
-            },
-
-            idadePessoa() {
-                return 'Idade ' + this.idade;
-            }
-        }
+       
     })
 </script>
