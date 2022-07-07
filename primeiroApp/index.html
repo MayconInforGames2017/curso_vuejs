@@ -2,11 +2,8 @@
 
 <div id="app">
     <h1>Primeiro App</h1>
-    <p>Usuário: {{nome}}</p>
-    
-    <button v-on:click="entrar(10)">Entrar</button>
-    <button v-on:click.once="entrar(10)">Número 10 Once</button>
-    
+    <p v-once>Usuário: {{nome}}</p>
+    <p>Bem vindo {{entrar()}}</p>
 
 </div>
 
@@ -19,8 +16,9 @@
             }
         },
         methods: {
-            entrar(numero) {
-                this.nome += numero;
+            entrar() {
+                this.nome = 'Pedro Lucas';
+                return this.nome;
             }
         }
     })
