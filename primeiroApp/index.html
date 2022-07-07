@@ -1,16 +1,30 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <div id="app">
-    <h1>Primeiro Projeto</h1>
-    <p>Bem vindo {{ nome }}</p>
+    <h1>Primeiro App</h1>
+    <p>Bem vindo {{nome}}</p>
+    <p>Valor do console {{valor}}</p>
+    <p>{{ bemVindo() }}</p>
+    <p>{{ idadePessoa() }}</p>
+    <h2>Testes</h2>
 </div>
 
 <script>
     new Vue({
-        el: '#app',  // O elemento está na div id=app
+        el: '#app',
         data() {
-            return{
-                nome: 'Maycon'
+            return {
+                nome: 'Maycon Santana',
+                idade: '36'
+            }
+        },
+        methods: {
+            bemVindo() {
+                return 'Bem vindo ' + this.nome;
+            },
+
+            idadePessoa() {
+                return 'Idade ' + this.idade;
             }
         }
     })
