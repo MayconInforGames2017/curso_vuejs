@@ -4,7 +4,9 @@
     <h1>Primeiro App</h1>
     <p>Usuário: {{nome}}</p>
     
-    <button v-on:click="entrar">Entrar</button>
+    <button v-on:click="entrar(10)">Entrar</button>
+    <button v-on:click.once="entrar(10)">Número 10 Once</button>
+    
 
 </div>
 
@@ -17,8 +19,8 @@
             }
         },
         methods: {
-            entrar() {
-                this.nome = 'Maycon Inforgames';
+            entrar(numero) {
+                this.nome += numero;
             }
         }
     })
