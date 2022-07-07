@@ -1,9 +1,9 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <div id="app">
-    <h1>Primeiro App</h1>
-    <p v-once>Usuário: {{nome}}</p>
-    <p>Bem vindo {{entrar()}}</p>
+    <h1>{{nome}}</h1>
+
+    <input v-model="nome"/>
 
 </div>
 
@@ -13,12 +13,6 @@
         data() {
             return {
                 nome: 'Maycon Santana',
-            }
-        },
-        methods: {
-            entrar() {
-                this.nome = 'Pedro Lucas';
-                return this.nome;
             }
         }
     })
