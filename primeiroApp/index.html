@@ -2,8 +2,13 @@
 
 <div id="app">
     <h1>{{nome}}</h1>
+    <p>Nome Grande: {{resultadoNome}}</p>
+    <button v-on:click="somar">Somar #</button>
 
-    <input v-model="nome"/>
+    <hr/>
+
+    <h1>{{numero}}</h1>
+    <button v-on:click="numero++"> Somar Número</button>
 
 </div>
 
@@ -13,7 +18,23 @@
         data() {
             return {
                 nome: 'Maycon Santana',
+                numero: 10
             }
-        }
+        },
+        methods: {
+                somar() {
+                    this.nome += '#';       
+                },
+          //      resultadoNome() {
+          //          console.log('CHAMOU METODO RESULTADO NOME');
+          //          return this.nome.length >= 10 ? 'Mais que 10 letras' : 'Menor que 10 letras' ;
+          //      }
+            },
+            computed: {
+                resultadoNome() {
+                    console.log('CHAMOU COMPUTED RESULTADO');
+                    return this.nome.length >= 10 ? 'Mais que 10 letras' : 'Menor que 10 letras' ;
+                }
+            }
     })
 </script>
