@@ -22,19 +22,26 @@
             }
         },
         methods: {
-                somar() {
-                    this.nome += '#';       
-                },
-          //      resultadoNome() {
-          //          console.log('CHAMOU METODO RESULTADO NOME');
-          //          return this.nome.length >= 10 ? 'Mais que 10 letras' : 'Menor que 10 letras' ;
-          //      }
+            somar() {
+                this.nome += '#';
             },
-            computed: {
-                resultadoNome() {
-                    console.log('CHAMOU COMPUTED RESULTADO');
+        },
+        computed: {
+            resultadoNome() {
                     return this.nome.length >= 10 ? 'Mais que 10 letras' : 'Menor que 10 letras' ;
-                }
             }
+        },
+        watch: {
+            nome(novo, antigo) {
+                // Ou seja, sempre que a variavel mudar ele vai chamar esse watch
+                console.log('NOVO VALOR: ' + novo);
+                console.log('ANTIGO VALOR: ' + antigo);
+
+                setTimeout(() => {
+                    this.numero = 999;
+                }, 2000);
+
+            }
+        }
     })
 </script>
