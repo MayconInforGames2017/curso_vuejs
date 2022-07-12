@@ -7,12 +7,12 @@
 </template>
 
 <script>
-export default {
-    name: 'Usuario'
-}
-</script>
+    export default {
+        name: 'Usuario'
+    }
+    </script>
 
-<style>
+<style scoped>
     h2 {
         color: red;
     }
