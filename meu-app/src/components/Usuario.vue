@@ -1,19 +1,20 @@
 <template>
   <div id="usuario">
 
-    <h2>Olá: Maycon Santana</h2>
+    <h2>Olá: {{nome}}</h2>
 
   </div>
 </template>
 
 <script>
-    export default {
-        name: 'Usuario'
-    }
-    </script>
 
-<style scoped>
-    h2 {
-        color: red;
-    }
+  export default {
+    name: '-Usuario',
+    props: ['nome']
+  }
+</script>
+
+<style scope>
+  h1 {
+  }
 </style>
